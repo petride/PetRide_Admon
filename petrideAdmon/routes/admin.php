@@ -16,3 +16,7 @@ use App\Http\Controllers\Admin\HomeController;
 */
 
 Route::get('/', [HomeController::class, 'index']);
+Route::get('/solicitudes', [HomeController::class, 'solicitudes']);
+Route::get('/usuarios', [HomeController::class, 'usuarios']);
+Route::get('/configuracion', [HomeController::class, 'configuracion']);
+Route::get('/config/transporte', [HomeController::class, 'configuracion_transporte']);

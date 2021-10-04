@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 3',
+    'title' => 'PetRide',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -65,7 +65,7 @@ return [
     */
 
     'usermenu_enabled' => true,
-    'usermenu_header' => false,
+    'usermenu_header' => true,
     'usermenu_header_class' => 'bg-primary',
     'usermenu_image' => false,
     'usermenu_desc' => false,
@@ -85,7 +85,7 @@ return [
 
     'layout_topnav' => null,
     'layout_boxed' => null,
-    'layout_fixed_sidebar' => null,
+    'layout_fixed_sidebar' => true,
     'layout_fixed_navbar' => null,
     'layout_fixed_footer' => null,
     'layout_dark_mode' => null,
@@ -128,7 +128,7 @@ return [
     'classes_content_header' => '',
     'classes_content' => '',
     'classes_sidebar' => 'sidebar-dark-primary elevation-4',
-    'classes_sidebar_nav' => '',
+    'classes_sidebar_nav' => 'fixed',
     'classes_topnav' => 'navbar-white navbar-light',
     'classes_topnav_nav' => 'navbar-expand',
     'classes_topnav_container' => 'container',
@@ -237,7 +237,7 @@ return [
         ],
 
         // Sidebar items:
-        [
+        /*[
             'type' => 'sidebar-menu-search',
             'text' => 'search',
         ],
@@ -245,15 +245,30 @@ return [
             'text' => 'blog',
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
+        ],*/
+        [
+            'text'        => 'Inicio',
+            'url'         => 'admin/',
+            'icon'        => 'fas fa-home',
         ],
         [
-            'text'        => 'pages',
-            'url'         => 'admin/pages',
-            'icon'        => 'far fa-fw fa-file',
+            'text'        => 'Solicitudes',
+            'url'         => 'admin/solicitudes',
+            'icon'        => 'fas fa-file',
             'label'       => 4,
-            'label_color' => 'success',
+            'label_color' => 'danger',
         ],
-        ['header' => 'account_settings'],
+        [
+            'text'        => 'Usarios',
+            'url'         => 'admin/usuarios',
+            'icon'        => 'fas fa-users',
+        ],
+        [
+            'text'        => 'Configuración',
+            'url'         => 'admin/configuracion',
+            'icon'        => 'fas fa-cog',
+        ],
+        /*['header' => 'account_settings'],
         [
             'text' => 'profile',
             'url'  => 'admin/settings',
@@ -301,23 +316,7 @@ return [
                     'url'  => '#',
                 ],
             ],
-        ],
-        ['header' => 'labels'],
-        [
-            'text'       => 'important',
-            'icon_color' => 'red',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'warning',
-            'icon_color' => 'yellow',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'information',
-            'icon_color' => 'cyan',
-            'url'        => '#',
-        ],
+        ],*/
     ],
 
     /*
