@@ -13,8 +13,16 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
+        Schema::create('roles', function (Blueprint $table) {
+    		$table->increments('id');
+    		$table->string('name')->comment('Nombre del rol de usuario');
+    		$table->text('description');
+    		$table->timestamps();
+	    });
+
         Schema::create('users', function (Blueprint $table) {
             $table->id();
+            $table->unsignedInteger('role_id')->default(\App\Models\Role::CLIENT);
             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
@@ -32,5 +40,6 @@ class CreateUsersTable extends Migration
     public function down()
     {
         Schema::dropIfExists('users');
+        Schema::dropIfExists('roles');
     }
 }
